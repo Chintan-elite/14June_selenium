@@ -1,0 +1,23 @@
+package parameter;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+import utill.Driverconnection;
+
+public class LoginTest2 {
+	
+	@Parameters({"uname","pass"})
+	@Test
+	public void test(String username, String password)
+	{
+		WebDriver driver = Driverconnection.getconnection();
+		driver.get("http://topshrms.in/");
+		
+		driver.findElement(By.id("l_username")).sendKeys(username);
+		driver.findElement(By.id("l_password")).sendKeys(password);
+		driver.findElement(By.xpath("//*[@id=\"frm_login\"]/div[3]/button")).click();
+	}
+}

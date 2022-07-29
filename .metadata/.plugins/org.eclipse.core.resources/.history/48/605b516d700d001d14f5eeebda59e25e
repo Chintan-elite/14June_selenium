@@ -1,0 +1,17 @@
+package listener;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
+
+import utill.Driverconnection;
+
+public class MyTest {
+	
+	@Test
+	public void titleCheck()
+	{
+		WebDriver driver = Driverconnection.getconnection();
+	}
+	
+	
+}

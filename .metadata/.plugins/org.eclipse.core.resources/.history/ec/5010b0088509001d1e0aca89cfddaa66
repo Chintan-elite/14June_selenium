@@ -1,0 +1,14 @@
+package listener;
+
+public class ListernerEx {
+	
+	public void test1()
+	{
+		System.out.println("running test1");
+	}
+	
+	public void test2()
+	{
+		System.out.println("running test2");
+	}
+}

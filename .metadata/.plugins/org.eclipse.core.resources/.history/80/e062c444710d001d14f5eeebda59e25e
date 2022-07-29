@@ -1,0 +1,22 @@
+package listener;
+
+import static org.testng.Assert.assertEquals;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
+
+import utill.Driverconnection;
+
+public class MyTest {
+	
+	@Test
+	public void titleCheck()
+	{
+		WebDriver driver = Driverconnection.getconnection();
+		driver.get("https://www.facebook.com/");
+		
+		assertEquals("FaceBook", driver.getTitle());
+	}
+	
+	
+}
